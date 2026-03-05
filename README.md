@@ -13,7 +13,19 @@
 2. 安装并配置 [LSPosed](https://github.com/LSPosed/LSPosed) 框架
 3. 安装本模块 APK 文件
 4. 在 LSPosed 中启用模块，并勾选 **小红书** 应用
-5. 启动本模块 App 以保持其在后台常驻（**必须**）
+5. 创建config.json
+
+```json
+{
+    "base_url": "https:\/\/api.lkeap.cloud.tencent.com\/v1\/",
+    "api_key": "sk-",
+    "model_name": "deepseek-v3.2",
+    "show_layout_viewer": false
+}
+```
+adb push config.json /storage/emulated/0/Android/data/com.delete.aiReply/files/
+
+6. 启动本模块 App 以保持其在后台常驻（**必须**）
 
 ## 📹 使用演示
 

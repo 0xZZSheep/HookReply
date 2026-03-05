@@ -248,7 +248,7 @@ public class Hooker implements IXposedHookLoadPackage {
                                 if (duration < 200 && deltaX < 10 && deltaY < 10) {
                                     XposedBridge.log("performClick view: " + view.getClass().getSimpleName());
                                     XposedBridge.log("lastClickedView: " + lastClickedView);
-                                    if(view.getClass().getSimpleName().equals("HandlePressStateCommentTextView")){
+                                    if(view.getClass().getSimpleName().startsWith("HandlePressStateCommentTextView")){
                                         View recycler = findParent(view, view2-> view2.getClass().getSimpleName().equals("CommentListView"));
                                         if(recycler !=null){
                                             XposedBridge.log("recycler classname: " + recycler.getClass().getName());
